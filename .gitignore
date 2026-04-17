@@ -1,0 +1,32 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+
+# Claude Code caches
+.claude/cache/
+.claude/history/
+
+# Logs
+*.log
+
+# Temp
+*.tmp
+~$*
+
+# Node (por si se usa para automatizaciones locales)
+node_modules/
+dist/
