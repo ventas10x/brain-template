@@ -38,21 +38,34 @@ El segundo cerebro del cliente. Todo lo que produce en la asesoría vive aquí.
 - Cuando generes copy · dale a Claude todo el contexto de `CLAUDE.md` + el avatar + swipes
 - Cuando una herramienta lleve 2 semanas sin usarse · cancelar
 
-## Comandos útiles
+## Cómo arrancar
+
+Dos opciones · ambas dejan tu Brain con historia git propia.
+
+### Opción A · clonar y desprender (CLI)
 
 ```bash
-# Primera vez
+git clone https://github.com/ventas10x/brain-template.git brain-{tunombre}
+cd brain-{tunombre}
+rm -rf .git
 git init
 git add .
 git commit -m "primer commit — sesión 0"
+```
 
+### Opción B · "Use this template" (GitHub web)
+
+En [github.com/ventas10x/brain-template](https://github.com/ventas10x/brain-template) · botón verde **Use this template** → crea tu propio repo con historia limpia → lo clonas con `git clone`.
+
+## Comandos día a día
+
+```bash
 # Cada sesión
 git add .
 git commit -m "sesion-N: {qué pasó}"
 
-# Subir a GitHub (tras crear el repo en github.com/tu-user/brain-tunombre)
-git remote add origin git@github.com:tu-user/brain-tunombre.git
-git push -u origin main
+# Backup en cloud (primera vez, si usaste Opción A)
+gh repo create brain-{tunombre} --private --source=. --remote=origin --push
 ```
 
 ## Flujo de llenado
