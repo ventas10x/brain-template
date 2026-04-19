@@ -15,6 +15,7 @@ El segundo cerebro del cliente. Todo lo que produce en la asesoría vive aquí.
 
 - **avatares/** — avatar principal + secundario, detallados
 - **oferta/** — oferta, objeciones, garantía, pricing
+- **material-fuente/** — transcripciones, PDFs y posts en markdown · insumo para extraer perfil de voz
 
 ### Producción por módulo
 
@@ -25,8 +26,9 @@ El segundo cerebro del cliente. Todo lo que produce en la asesoría vive aquí.
 
 ### Soportes
 
-- **prompts/** — prompts afinados para copy en tu voz · 4 listos + el de onboarding
+- **prompts/** — prompts afinados para copy en tu voz · 4 listos + onboarding + perfil de voz
 - **skills/** — skills custom invocables con `/nombre`
+- **scripts/** — automatizaciones (ej. `fetch-videos.mjs` para descargar transcripts de YouTube)
 - **referencias/** — swipes, competencia, inspiración
 - **assets/** — outputs generados (videos, imágenes, PDFs)
 - **sesiones/** — bitácora de cada sesión, organizadas por mes
@@ -45,8 +47,8 @@ Dos opciones · ambas dejan tu Brain con historia git propia.
 ### Opción A · clonar y desprender (CLI)
 
 ```bash
-git clone https://github.com/ventas10x/brain-template.git brain-{tunombre}
-cd brain-{tunombre}
+git clone https://github.com/ventas10x/brain-template.git mi-brain
+cd mi-brain
 rm -rf .git
 git init
 git add .
@@ -65,7 +67,7 @@ git add .
 git commit -m "sesion-N: {qué pasó}"
 
 # Backup en cloud (primera vez, si usaste Opción A)
-gh repo create brain-{tunombre} --private --source=. --remote=origin --push
+gh repo create mi-brain --private --source=. --remote=origin --push
 ```
 
 ## Flujo de llenado
